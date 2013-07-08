@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>test css.js</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="qunit/qunit-1.12.0.css">
+	<script type="text/javascript" src="qunit/qunit-1.12.0.js"></script>
+	<style type="text/css">
+		body{
+			font:1em/1.25 serif,arial;
+		}
+		#test-container div{
+			display: inline-block;
+			*display: inline;
+			*zoom:1;
+			vertical-align: middle;
+			margin-right: 1em;
+		}
+		#demo1{
+			font-size: 1.2em;
+			width: 10%;
+			height: 100px;
+			border:1px solid #CCC;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+			filter: alpha(opacity=80);
+			opacity: 0.8;
+		}
+		#demo2{
+			font-size: 1.2em;
+			width: 156px;
+			height: 100px;
+			border:1px solid #CCC;
+		}
+	</style>
+</head>
+<body>
+	<div id="qunit"></div>
+  	<div id="qunit-fixture"></div>
+  	<div id="test-container">
+	  	<div id="demo1">
+	  		<p>测试get方法</p>
+	  	</div>
+  	</div>
+	<script type="text/javascript" src="../css.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+</body>
+</html>
