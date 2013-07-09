@@ -69,7 +69,7 @@
 				name=name==="float"?"styleFloat":name;//styleFloat获取float
 				if(name==='opacity'){
 
-					return ropacity.test( (elem.currentStyle ? elem.currentStyle.filter : elem.style.filter) || "" ) ?( 0.01 * parseFloat( RegExp.$1 ) ) + "" : computed ? "1" : "";
+					return ropacity.test( (elem.currentStyle ? elem.currentStyle.filter : elem.style.filter) || "" ) ?( 0.01 * parseFloat( RegExp.$1 ) ) + "" : 1;
 
 				}else if(name==="width"||name==="height"){
 
