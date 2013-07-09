@@ -16,10 +16,11 @@ var css=function(elem){
 		var getWidthOrHeight=function(elem,name){	//用于获取elem的width和height
 
 			var ret=name==="width"?elem.clientWidth:elem.clientHeight
-				,pt=parseFloat(css.get(elem,'paddingTop'))
-				,pb=parseFloat(css.get(elem,'paddingBottom'))
-				,pl=parseFloat(css.get(elem,'paddingLeft'))
-				,pr=parseFloat(css.get(elem,'paddingRight'));
+				,pt=parseFloat(new css(elem).get('paddingTop'))
+				,pb=parseFloat(new css(elem).get('paddingBottom'))
+				,pl=parseFloat(new css(elem).get('paddingLeft'))
+				,pr=parseFloat(new css(elem).get('paddingRight'));
+
 			ret=(name==="width"?ret-pl-pr:ret-pt-pb)+'px';
 			return ret;
 
@@ -71,7 +72,7 @@ var css=function(elem){
 			}else if(name==="width"||name==="height"){
 
 				if(elem.currentStyle[name]==="auto"){    //如果未设置width,height默认返回auto
-					ret==getWidthOrHeight(elem,name);
+					ret=getWidthOrHeight(elem,name);
 					return ret;
 				}
 

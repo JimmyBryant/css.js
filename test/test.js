@@ -5,7 +5,7 @@ var demo1=document.getElementById('demo1'),
 
 test( "测试get方法", function() {
   equal( mycss.get('height'),'100px', "高度100px" );
-  notEqual( Math.round(parseFloat(mycss.get('width'))),'10%', "宽度不是10%" );
+  notEqual(mycss.get('width'),'auto', "宽度不会返回auto" );
   equal(parseFloat(mycss.get('opacity')).toFixed(1),0.8,'透明度0.8');
   equal(Math.round(parseFloat(mycss.get('margin-right'))),'19','margin-right19px');
 });
