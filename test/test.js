@@ -1,7 +1,7 @@
 module('css.js tests');
 
 var demo1=document.getElementById('demo1'),
-	mycss=new css(demo1);
+	mycss=css(demo1);
 
 test( "测试get方法", function() {
   equal( mycss.get('height'),'100px', "高度100px" );
