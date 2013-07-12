@@ -1,4 +1,4 @@
-(function(window,elem){
+var css = (function(window){
 
 	var css=function(elem){
 
@@ -147,8 +147,10 @@
 		};
 		return this;
 	};
-	window.css=function(elem){	//省去调用过程使用new
+
+	return function(elem){	//省去调用过程使用new
 		return new css(elem);
 	};
+
 })(window);
 
